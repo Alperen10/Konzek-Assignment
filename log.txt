@@ -1,0 +1,11 @@
+2023/12/22 15:29:58 handler.go:140: All tasks retrieved successfully. Count: 3
+2023/12/22 15:37:28 handler.go:186: Failed to get task: no rows in result set
+2023/12/22 15:37:38 handler.go:191: Getting a task. ID: 4, Title: JULİAA
+2023/12/22 15:40:55 handler.go:253: Task updated successfully. ID: 4, New Title: Umut
+2023/12/22 15:41:22 handler.go:140: All tasks retrieved successfully. Count: 3
+2023/12/22 15:41:46 handler.go:308: Task deleted successfully. ID: 12
+2023/12/22 15:42:52 handler.go:69: Task created successfully. ID: 13, Title: first hello
+2023/12/22 17:43:15 handler.go:92: Task created successfully. ID: 14, Title: açıklama1
+2023/12/22 17:44:19 handler.go:92: Task created successfully. ID: 15, Title: açıklama2
+2023/12/22 17:55:56 handler.go:92: Task created successfully. ID: 16, Title: açıklama3
+2023/12/22 18:13:39 handler.go:146: All tasks retrieved successfully. Count: 6

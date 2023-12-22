@@ -1,0 +1,114 @@
+basePath: /api
+definitions:
+  models.CreateTask:
+    properties:
+      description:
+        type: string
+      status:
+        type: string
+      title:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a Task server.
+  title: Task Service API
+  version: "1.0"
+paths:
+  /deleteTask/{id}:
+    delete:
+      description: Data is deleted according to the given id.
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Delete task by id
+      tags:
+      - tasks
+  /newTask:
+    post:
+      consumes:
+      - application/json
+      description: Save tasks data in Db.
+      parameters:
+      - description: Task
+        in: body
+        name: task
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateTask'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Create tasks
+  /singleTask/{id}:
+    get:
+      description: The requested data is fetched according to the given id number.
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get Single tasks by id.
+      tags:
+      - tasks
+  /task:
+    get:
+      description: Return list of tasks.
+      responses:
+        "200":
+          description: OK
+      summary: Get All tasks.
+      tags:
+      - tasks
+  /updateTask/{id}/{title}:
+    put:
+      description: Data is updated according to the given id.
+      parameters:
+      - description: Task ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Task Title
+        in: path
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Update task by id
+      tags:
+      - tasks
+swagger: "2.0"
